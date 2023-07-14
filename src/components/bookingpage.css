@@ -29,17 +29,24 @@
   .nav-bar h1{
     margin-left: 100px;
     color: rgb(255, 3, 3);
+    transform: skew(-20deg);
   }
   
   .nav_button_back{
-    margin-left: 700px;
+    margin-left: 691px;
     background-color: black;
     width: 100px;
     border-radius: 5px;
-    border: 1px transparent solid;
-    padding: 1px 15px 3px 15px;
-    color:aqua;
+    color: rgb(2, 255, 171);
     text-decoration: none;
+    transform: skew(-20deg);
+  }
+
+  .nav_button_back:hover{
+   
+    background-color: rgb(5, 250, 54);
+    color: red;
+    text-decoration: underline;
   }
   
   .nav_button_home{
@@ -47,11 +54,17 @@
      background-color: black;
      width: 100px;
      border-radius: 5px;
-     border: 1px transparent solid;
-     padding: 1px 15px 3px 15px;
-     color:aqua;
+     color: rgb(2, 255, 171);
      text-decoration: none;
+     transform: skew(-20deg);
   }
+
+  .nav_button_home:hover{
+    background-color: rgb(5, 250, 54);
+    color: red;
+    text-decoration: underline;
+ }
+
   
   .hero{
     display: flex;
@@ -95,6 +108,14 @@
     width: 400px;
     background-color: black;
     color: rgb(2, 255, 171);
+    transform: skew(-20deg);
+    border-radius: 10px;
+  }
+
+  .book_button:hover{
+    background-color: rgb(5, 250, 54);
+    color: rgb(255, 2, 2);
+    text-decoration: underline;
   }
   
   

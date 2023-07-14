@@ -20,7 +20,7 @@ function ImageSlider() {
         <img className="slide" src="https://images.thedirect.com/media/article_full/spider-man-no-way-home-poster-doc-ock.jpg" alt="Image 1" />
       </div>
       <div>
-        <img className="slide" src="https://webneel.net/file/images/11-16/8-xmen-movie-poster-design.jpg" alt="Image 2" />
+        <img className="slide" src="" alt="Image 2" />
       </div>
       <div>
         <img className="slide" src="https://goggler.my/wp-content/uploads/2019/12/JM2_INTL_30Sht_BRIDGE_03-e1575889045252.jpg" alt="Image 3" />

@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 
 
 function BNavBar() {
+
+    const linkStyle = {
+        textDecoration: 'none' // Apply the text-decoration style directly
+    };
+
     return (
         <div className="nav">
             <div className="nav-bar">
@@ -11,11 +16,21 @@ function BNavBar() {
                     Booking Page
                 </h1>
                 <span>
-                    <Link to="/" className="nav_button_back">Back</Link>
+                    <Link to="/" style={linkStyle} >
+                        <button className="nav_button_back">
+                            Back
+                        </button>
+                    </Link>
                 </span>
             </div>
             <span>
-                <Link to="/" className="nav_button_home">Home</Link>
+
+                <Link to="/" style={linkStyle}>
+                    <button className="nav_button_home">
+                        Home
+                    </button>
+                </Link>
+
             </span>
         </div>
 

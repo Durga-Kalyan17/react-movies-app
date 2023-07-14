@@ -8,7 +8,20 @@ body {
   background-image: url('https://wallpapers.com/images/featured/sjryfre8k8f6i3ge.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  width:auto;
+  width: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: aqua;
 }
 
 code {
@@ -16,7 +29,7 @@ code {
     monospace;
 }
 
-.search{
+.search {
   display: flex;
   justify-content: flex-end;
   padding-bottom: 10px;
@@ -26,96 +39,155 @@ code {
   /* background-color: blueviolet; */
 }
 
-.search_button{
-  background-color: transparent;
-  color: rgb(246, 1, 1);;
+.search_button {
+  background-color: greenyellow;
+  color: blueviolet;
   /* border: 0.5px white solid; */
-  margin-left: 2px;
+  margin-left: 10px;
   height: 22px;
   border-radius: 5px;
+  transform: skew(-20deg);
+  text-decoration: none;
 }
 
-.input{
-  width: 400px;
+.search_button:hover {
+  background-color: green;
+  color: white;
+  text-decoration: underline;
+}
+
+.search_text{
+  text-decoration: none;
+}
+
+.search_text:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+.input {
+  width: 320px;
   border-radius: 5px;
   border: none;
   height: 22px;
 }
 
-.buttons{
+.buttons {
   display: flex;
-  margin-left: 25px;
+  margin-left: 15px;
+  margin-right: 10px;
   /* margin-top: 10px; */
 }
 
-.button{
+.button {
   height: 50px;
   width: 500px;
   font-size: 25px;
-  color:  rgb(246, 1, 1);
+  color: rgb(246, 1, 1);
   background-color: transparent;
   /* border: 2px rgb(33, 0, 222) solid; */
   border-radius: 50px;
 }
 
-.button_middle{
+.button_middle {
   margin-left: 10px;
   margin-right: 10px;
   height: 50px;
   width: 500px;
   font-size: 25px;
-  color:  rgb(246, 1, 1);
+  color: rgb(246, 1, 1);
   background-color: transparent;
   /* border: 2px rgb(33, 0, 222) solid; */
   border-radius: 50px;
 }
 
-.slide{
+.slide {
   width: 620px;
   height: 230px;
-  margin-left: 320px;
+  margin-left: 220px;
   margin-top: 10px;
 }
 
-.card_container{
-  margin-top: 0px;
-  margin-left: 83px;
-  margin-right: 80px;
-  height: 200px;
-  width: 150px;
+.card-title{
+  color:aqua;
+  transform: skew(-20deg);
+  margin-bottom: 5px;
 }
 
-.recomendations{
+.card_button{
+  background-color: greenyellow;
+  color: blueviolet;
+  border: none;
+  border-radius: 5px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  transform: skew(-20deg);
+  width: 100px;
+}
+
+.card_button:hover{
+  background-color: green;
+  color: white;
+  border: none;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  transform: skew(-20deg);
+  width: 100px;
+  text-decoration: underline;
+}
+
+.recomendations {
   margin-top: 5px;
-  margin-left: 450px;
+  margin-left: 480px;
   color: rgb(230, 219, 69);
 }
 
-.card{
+.card_slider {
   display: flex;
-  justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  margin-right: -10px;
+  /* background-color: white; */
+  /* Add negative margin to counteract the space */
 }
 
-.card-pic{
+.card_slider::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+.card {
+  display: flex;
+  
+}
+
+.card_container {
+  margin-right: 30px;
+  margin-left: 30px;
+  /* flex: 0 0 auto; */
+  width: 150px;
+}
+
+.card-pic {
   height: 200px;
   width: 150px;
 }
 
-.card-link{
-  color: red;
-  width: 150px;
-  background-color: transparent;
-  margin-top: 0px;
-  margin-left: 35px;
-  border: 1px white solid;
-  border-radius: 5px;
-  text-decoration: none;
-  padding: 2px 20px 2px 20px;
+.card-pic:hover {
+  transform: scale(1.05);
 }
 
-.home{
-  height: 100%;
-  width: 98%;
+.img_slider {
+  /* width: 98%; */
+  margin-right: 120px;
+  margin-left: 120px;
 }
 
+.error{
+  font-size: 50px;
+  margin-left: 450px;
+  color: brown;
+}
 
