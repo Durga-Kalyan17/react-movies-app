@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function SearchBox() {
@@ -18,18 +18,18 @@ function SearchBox() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="search_form">
       <input className='input'
         type="text"
         placeholder="Search Movies..."
         value={searchTerm}
         onChange={handleChange}
       />
-      <button className='search_button' type="submit">
-        <Link to="/search-results/:title" className='search_text'>
+      <Link to="/search-results/:title" className='search_text'>
+        <button className='search_button' type="submit">
           Search
-        </Link>
-      </button>
+        </button>
+      </Link>
     </form>
   );
 }

@@ -1,16 +1,21 @@
 import React from "react";
 import DateSelector from "./DatePicker";
 import './TicketConfirmPage.css';
+import TimeDropdown from "./TimeDropdown";
 
 
 function CHero() {
     return (
-        <div>
+        <div className="date_time">
             <div className="date-select">
                 <h2 className="date">
                     Date :
                 </h2>
                 <DateSelector />
+                <h2 className="date">
+                    Time :
+                </h2>
+                <TimeDropdown />
             </div>
             <div>
                 <h2 className="shows">

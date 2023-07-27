@@ -1,23 +1,29 @@
 import React from "react";
-import CNavBar from "./CNavBar";
+import BNavBar from "./BNavBar";
 import CHero from "./CHero";
 import TicketCounter from './TicketCounter';
 // import './TicketConfirmPage.css';
+import { Link, useParams } from "react-router-dom";
 
 
-function CBookingPage(){
-    return(
+function CBookingPage() {
+
+    const { id } = useParams();
+
+    return (
         <>
-            <CNavBar />
+            <BNavBar />
             <CHero />
             <h2 className="seats">
-                  Choose Number of Seats  
+                Choose Number of Seats
             </h2>
             <div className="footer">
                 <TicketCounter />
-                <button className="cbook_button">
-                    Confirm Booking
-                </button>
+                <Link to={`/ticket-details/${id}`}>
+                    <button className="cbook_button">
+                        Confirm Booking
+                    </button>
+                </Link>
             </div>
         </>
     );

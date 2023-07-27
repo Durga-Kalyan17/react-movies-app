@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://wallpapers.com/images/featured/sjryfre8k8f6i3ge.jpg');
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20191113/pngtree-film-film-stage-blue-glitter-movie-background-image_322039.jpg');
+  /* https://wallpapers.com/images/featured/sjryfre8k8f6i3ge.jpg */
   background-repeat: no-repeat;
   background-size: cover;
   width: auto;
@@ -31,87 +32,122 @@ code {
 
 .search {
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: space-around; */
+  align-items: center;
+  height: 30px;
+  margin-bottom: 5px;
+  margin-top: 0px;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-right: 20px;
-  /* border-bottom: 2px rgb(247, 242, 242) solid; */
-  /* background-color: blueviolet; */
+  /* position: fixed; */
+}
+
+.search h1{
+  color: rgba(243, 3, 51, 1);
+  transform: skew(-20deg);
+  text-shadow: 5px 5px 20px  greenyellow;
+  margin-left: 100px;
+}
+
+.user{
+  color: darkviolet;
+  margin-left: 40px;
+  width: 220px;
+  text-shadow: 2px 2px 7px cornsilk;
+
 }
 
 .search_button {
+  width: 80px;
   background-color: greenyellow;
-  color: blueviolet;
-  /* border: 0.5px white solid; */
+  color: blue;
   margin-left: 10px;
   height: 22px;
   border-radius: 5px;
+  border: none;
   transform: skew(-20deg);
   text-decoration: none;
+  box-shadow: 2px 2px 20px 2px blue;
+  text-shadow: 0.2px 0.2px 0.2px black;
 }
 
 .search_button:hover {
   background-color: green;
   color: white;
   text-decoration: underline;
-}
-
-.search_text{
-  text-decoration: none;
-}
-
-.search_text:hover{
-  color: white;
-  text-decoration: underline;
+  box-shadow: 2px 2px 20px 2px green;
+  transform: scale(1.10) skew(-20deg);
+  cursor: pointer;
 }
 
 .input {
-  width: 320px;
+  width: 310px;
   border-radius: 5px;
   border: none;
   height: 22px;
+  margin-left: 230px;
+  box-shadow: 2px 2px 20px 2px gray;
+  outline: none;
+}
+
+.input:hover {
+  transform: scale(1.02);
+  cursor:auto;
 }
 
 .buttons {
   display: flex;
+  justify-content: space-around;
   margin-left: 15px;
   margin-right: 10px;
-  /* margin-top: 10px; */
+  /* margin-top: 100px; */
 }
 
 .button {
-  height: 50px;
-  width: 500px;
-  font-size: 25px;
-  color: rgb(246, 1, 1);
+  height: 40px;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 600;
+  color: aquamarine;
+  text-shadow: 2px 2px 10px 10px pink;
   background-color: transparent;
-  /* border: 2px rgb(33, 0, 222) solid; */
   border-radius: 50px;
+  border: 3px aquamarine solid;
+  box-shadow: 1px 1px 30px 2px blueviolet;
+  transform: skew(-20deg);
 }
 
-.button_middle {
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 50px;
-  width: 500px;
-  font-size: 25px;
-  color: rgb(246, 1, 1);
-  background-color: transparent;
-  /* border: 2px rgb(33, 0, 222) solid; */
-  border-radius: 50px;
+.button:hover{
+  color: black;
+  font-weight: 800;
+  box-shadow: 0px 0px 30px 2px aqua;
+  text-decoration: underline;
+  background-color: aqua;
+  border: none;
+  transform: scale(1.12) skew(-20deg);
 }
 
 .slide {
-  width: 620px;
-  height: 230px;
-  margin-left: 220px;
-  margin-top: 10px;
+  width: 60%;
+  height: 300px;
+  margin-left: 20%;
+  margin-top: 20px;
+  box-shadow: 0.5px 0.5px 20px 2px white;
+  border-radius: 20px;
+}
+
+.slide:hover {
+  box-shadow: 0.8px 0.8px 20px 2px white;
+  transform: scale(1.02);
 }
 
 .card-title{
   color:aqua;
   transform: skew(-20deg);
   margin-bottom: 5px;
+  margin-left: 5px;
+  text-shadow: 1px 1px 1px red;
 }
 
 .card_button{
@@ -121,25 +157,32 @@ code {
   border-radius: 5px;
   margin-left: 25px;
   margin-bottom: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   transform: skew(-20deg);
   width: 100px;
+  box-shadow: 1px 1px 15px 1px greenyellow;
+  text-shadow: 0.2px 0.2px 0.2px black;
 }
 
 .card_button:hover{
   background-color: green;
   color: white;
+  font-size: 15px;
   border: none;
-  margin-left: 25px;
-  margin-bottom: 20px;
-  transform: skew(-20deg);
-  width: 100px;
   text-decoration: underline;
+  box-shadow: 1px 1px 15px 1px green;
+  transform: scale(1.15) skew(-20deg);
+  cursor: pointer;
 }
 
 .recomendations {
-  margin-top: 5px;
+  margin-top: 20px;
   margin-left: 480px;
+  margin-bottom: 0px;
   color: rgb(230, 219, 69);
+  text-shadow: 4px 4px 10px  orange;
+  transform: skew(-20deg);
 }
 
 .card_slider {
@@ -148,8 +191,6 @@ code {
   overflow-y: hidden;
   width: 100%;
   margin-right: -10px;
-  /* background-color: white; */
-  /* Add negative margin to counteract the space */
 }
 
 .card_slider::-webkit-scrollbar {
@@ -157,15 +198,12 @@ code {
   height: 0;
 }
 
-
 .card {
   display: flex;
-  
 }
 
 .card_container {
-  margin-right: 30px;
-  margin-left: 30px;
+  margin: 0px 30px;
   /* flex: 0 0 auto; */
   width: 150px;
 }
@@ -173,11 +211,15 @@ code {
 .card-pic {
   height: 200px;
   width: 150px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 2px white;
 }
 
 .card-pic:hover {
   transform: scale(1.05);
 }
+
+
 
 .img_slider {
   /* width: 98%; */
@@ -191,3 +233,55 @@ code {
   color: brown;
 }
 
+.log_in_out{
+  width: 100px;
+  background-color: greenyellow;
+  color: blue;
+  margin-left: 20px;
+  transform: skew(-20deg);
+  border-radius: 5px;
+  border: none;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  box-shadow: 2px 2px 20px 2px blue;
+  text-shadow: 0.2px 0.2px 0.2px black;
+}
+
+.log_in_out:hover{
+  background-color:aqua;
+  color:darkviolet;
+  text-decoration: underline;
+  transform: scale(1.10) skew(-20deg);
+  cursor: pointer;
+}
+
+.denied{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  width: 500px;
+  margin-top: 15%;
+  margin-left: 30%;
+}
+
+.denied h2{
+  color: red;
+  text-shadow: 1px 1px 5px red;
+  font-size: 40px;
+  transform: skew(-20deg);
+}
+
+.denied p{
+  color: blue;
+  font-size: 20px;
+  transform: skew(-20deg);
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+.denied_buttons{
+  margin-left: -700px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
