@@ -20,7 +20,13 @@ code {
   align-items: center;
   justify-content: center;
   justify-content: space-between;
-  margin: 0px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 80px;
+  z-index: 2;
 }
 
 .nav-bar {
@@ -31,7 +37,7 @@ code {
 }
 
 .nav h1 {
-  /* margin-left: 100px; */
+  margin-left: 5vw;
   color: rgba(243, 3, 51, 1);
   transform: skew(-20deg);
   text-shadow: 3px 3px 10px greenyellow;
@@ -39,7 +45,6 @@ code {
 
 .nav_button_back {
   height: 22px;
-  /* margin-left: 691px; */
   background-color: black;
   width: 100px;
   border-radius: 5px;
@@ -57,11 +62,11 @@ code {
   text-decoration: underline;
   transform: scale(1.1) skew(-20deg);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .nav_button_home {
   height: 22px;
-  /* margin-left: 20px; */
   background-color: black;
   width: 100px;
   border-radius: 5px;
@@ -71,6 +76,7 @@ code {
   transform: skew(-20deg);
   box-shadow: 2px 2px 10px 1.5px rgb(2, 255, 171);
   text-shadow: 0.2px 0.2px 0.2px red;
+  margin-right: 5vw;
 }
 
 .nav_button_home:hover {
@@ -79,16 +85,17 @@ code {
   text-decoration: underline;
   transform: scale(1.1) skew(-20deg);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 
 .hero {
   display: flex;
-  margin-top: 10px;
 }
 
 .hero img {
   margin-left: 50px;
+  margin-top: 90px;
   height: 400px;
   width: 550px;
   box-shadow: 0.5px 0.5px 20px 2px white;
@@ -102,6 +109,7 @@ code {
 .name-date {
   display: flex;
   margin-left: 5px;
+  margin-top: 90px;
 }
 
 .name-date h3 {
@@ -113,14 +121,14 @@ code {
 }
 
 .name-date h3:nth-child(1) {
- width: 400px;
- height: 150px;
- margin-left: 30px;
+  width: 400px;
+  height: 150px;
+  margin-left: 30px;
 }
 
 .name-date h3:nth-child(2) {
   margin-left: 10px;
- }
+}
 
 .name-date h3 p {
   margin-top: 0px;
@@ -169,28 +177,25 @@ code {
   text-decoration: underline;
   transform: scale(1.1) skew(-20deg);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .ticket-details {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .qr {
-  /* border: 1px green solid; */
   padding: 40px 40px;
 }
 
 .ticket {
-  /* border: 1px black solid; */
   padding: 20px 40px;
   color: aqua;
-  /* /* text-shadow: 3px 3px 3px crimson; */
-  transform: skew(-20deg); 
+  transform: skew(-20deg);
   margin-top: -18px;
-  /* margin-top: -10px; */
 }
 
 .ticket h3 {
@@ -211,7 +216,7 @@ code {
 
 /* Styles for the grid container */
 
-.uc_card_slider{
+.uc_card_slider {
   padding-top: 20px;
 }
 
@@ -222,13 +227,15 @@ code {
   column-gap: 5px;
   row-gap: 40px;
   margin-left: 80px;
+  margin-top: 80px;
 }
 
-.uc_card_container{
-  background-color: rgba(0, 0, 0, 0.5) ;
+.uc_card_container {
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   height: 260px;
   width: 200px;
+  position: relative;
 }
 
 /* Styles for the card title */
@@ -244,12 +251,13 @@ code {
 
 .up_card_title:hover {
   transform: scale(1.05) skew(-20deg);
+  transition: 0.5s;
 }
 
-.up_card_title strong{
- color:aquamarine;
- transform: skew(-20deg);
- text-shadow: 1px 1px 2px aquamarine;
+.up_card_title strong {
+  color: aquamarine;
+  transform: skew(-20deg);
+  text-shadow: 1px 1px 2px aquamarine;
 }
 
 /* Styles for the card picture */
@@ -258,10 +266,38 @@ code {
   width: 200px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px 2px white;
+  z-index: 1;
 }
 
 .up_card_pic:hover {
   transform: scale(1.05);
+  transition: 0.5s;
 }
 
+.uc_card_overlay {
+  font-style: italic;
+  font-family:sans-serif;
+  color: greenyellow;
+  text-shadow: 1px 1px 3px greenyellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  opacity: 0;
+  transition: 0.6s;
+  z-index: 1; /* Set the overlay above the image */
+  transform: translateY(5px);
+}
 
+.uc_card_container:hover .uc_card_overlay {
+  opacity: 1;
+  transform: translateX(0px);
+}

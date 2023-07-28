@@ -20,7 +20,9 @@ const TimeDropdown = () => {
     <div className="date-time-input">
       {/* <h3>Time : </h3> */}
       <select value={selectedOption} onChange={handleChange}>
-        <option value="">select time</option> {/* Default blank option */}
+        <option value="" style={{
+           outline: "none"
+        }}>select time</option> {/* Default blank option */}
         {options.map((option) => (
           <option key={option} value={option}>
             {option}

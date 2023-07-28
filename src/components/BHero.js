@@ -1,4 +1,4 @@
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import './bookingpage.css';
@@ -7,7 +7,7 @@ function BHero() {
 
     const { id } = useParams();
     const [movie, setMovie] = useState("");
-    const { isAuthenticated } = useAuth0();
+    // const { isAuthenticated } = useAuth0();
 
     const OMDB_URL = process.env.REACT_APP_OMDB_URL;
     const OMDB_KEY = process.env.REACT_APP_OMDB_KEY;
@@ -50,12 +50,17 @@ function BHero() {
                     </div>
                 </div>
             </span>
-            <Link to={ isAuthenticated ? `/booking-confirm-page/${id}`
-                                    : `/denied-page/${id}`}>
+            <Link to={ `/booking-confirm-page/${id}`}>
                 <button className="book_button">
                     Book now
                 </button>
             </Link>
+            {/* <Link to={ isAuthenticated ? `/booking-confirm-page/${id}`
+                                    : `/denied-page/${id}`}>
+                <button className="book_button">
+                    Book now
+                </button>
+            </Link> */}
         </>
     );
 }

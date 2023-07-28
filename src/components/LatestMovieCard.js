@@ -39,6 +39,7 @@ function LatestMovieCard({ props }) {
         <div className="uc_card_container">
             <Link to={`/booking-page/${movie.imdbID}`} >
                 <img className="up_card_pic" src={url} alt="pic" />
+                <div className="uc_card_overlay">Click Me</div>
             </Link>
             <Link to={`/booking-page/${movie.imdbID}`} style={linkStyle}>
                 <p className="up_card_title"> <strong>Title -</strong>

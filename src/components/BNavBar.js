@@ -1,25 +1,20 @@
 import React from "react";
 import './bookingpage.css';
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import BNavHeader from "./BNavHeader";
+import BackButton from "./BackButton"; 
+import HomeButton from "./HomeButton";
 
 
-function BNavBar() {
+export default function BNavBar() {
 
     const { id } = useParams();  
 
     const routePaths = ["/", `/booking-page/${id}`, `/booking-confirm-page/${id}`];
     let path = "";
 
-    const currentAddress = window.location.href;
+    const currentAddress = window.location.href; // to get current URL
     let header = "";
-
-    // <Route path="/upcoming-movies" element={<UpComingMovies />} />
-    //     <Route path="/latest-movies" element={<LatestMovies />} />
-    //     <Route path="/search-results/:title" element={<SearchResults />} />
-    //     <Route path="/booking-page/:id" element={<BookingPage />} />
-    //     <Route path="/booking-confirm-page/:id" element={<CBookingPage />} />
-    //     <Route path="/denied-page/:id" element={<DeniedPage />} />
-    //     <Route path="/ticket-details/:id" element={<TicketDetails />} />
 
     if(currentAddress.includes("booking-page")){
         header = "Booking Page";
@@ -41,36 +36,14 @@ function BNavBar() {
         header = "Latest Movies";
         path = routePaths[0];
     }
-        
-
-    const linkStyle = {
-        textDecoration: 'none' // Apply the text-decoration style directly
-    };
-
+    
     return (
         <div className="nav">
-            <h1>
-                {header}
-            </h1>
+            <BNavHeader header={header} />
             <div className="nav-bar">
-                <span>
-                    <Link to={path} style={linkStyle} >
-                        <button className="nav_button_back">
-                            Back
-                        </button>
-                    </Link>
-                </span>
-                <span>
-                    <Link to="/" style={linkStyle}>
-                        <button className="nav_button_home">
-                            Home
-                        </button>
-                    </Link>
-                </span>
+                <BackButton path={path} />
+                <HomeButton />
             </div>
         </div>
-
     );
 }
-
-export default BNavBar;

@@ -48,17 +48,20 @@ const MovieList = () => {
         fetchMovieData();
     }, [OMDB_URL, OMDB_KEY]);
 
-    return <div className="card_slider">
-        <div className="card">
-            {movies && movies.length > 0 ? (
-                movies.map((movie, index) => {
-                    return <MovieCard key={index} props={movie} />;
-                })
-            ) : (
-                <div className="error">No movies found.</div>
-            )}
-        </div>
-    </div >
+    return (
+        <>
+            <h1 className="recomendations">Recommended Movies</h1>
+            <div className="card_slider">
+                {movies && movies.length > 0 ? (
+                    movies.map((movie, index) => {
+                        return <MovieCard key={index} props={movie} />;
+                    })
+                ) : (
+                    <div className="error">No movies found.</div>
+                )}
+            </div >
+        </>
+    );
 }
 
 export default MovieList;
